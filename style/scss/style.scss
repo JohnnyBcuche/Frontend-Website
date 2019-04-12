@@ -1,0 +1,263 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+body {
+	scroll-behavior: smooth;
+}
+// Header
+.nav {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	background-color: #FAFAFA;
+	width: 100%;
+	font-size: 16px;
+	text-align: center;
+	.show-menu {
+		border-top: 1px solid #bfbfbf;
+	}
+	a, .show-menu {
+		text-decoration: none;
+		width: 100%;
+		height: 50px;
+		color: #2885C5;
+		line-height: 50px;
+		display: block;
+		border-bottom: 1px solid #bfbfbf;
+		cursor: pointer;
+	}
+	a:hover {
+		background-color: #E5E5E5;
+	}
+	.logo, .left {
+		height: 80px;
+	}
+	.right, #show-menu {
+		display: none;
+	}
+	input[type=checkbox]:checked ~ .right {
+		display:block;
+	}
+}
+// Main
+.main {
+	min-height: auto;
+	width: 100%;
+	overflow: hidden;
+	background-color: #FAFAFA;
+	padding-top: 130px;
+	padding-bottom: 40px;
+	.templates {
+		height: 30px;
+		width: 100%;
+		font-size: 16px;
+		line-height: 30px;
+		text-align: left;
+		padding: 10px 0;
+		color: #2885C5;
+		background:linear-gradient(#E5E5E5, #F1F1F1);
+		text-transform: uppercase;
+		border-bottom: 1px solid #bfbfbf;
+		p {	
+			padding-left: 20px;
+			font-weight: bold;
+		}
+	}
+	.menu {
+		width: 100%;
+		padding-bottom: 40px;
+		margin-bottom: -40px;
+		ul {
+			list-style: none;
+			:hover {
+				background-color: #F1F1F1;
+				color: #2885C5;
+			}
+			li {
+				padding: 5px 15px;
+				cursor: pointer;
+				a {
+					text-decoration: none;
+					font-size: 14px;
+					color: #B6B6B6;
+				}
+			}
+		}
+	}
+	.slides {
+		width: 100%;
+		padding-bottom: 40px;
+		margin-bottom: -40px;
+		padding-top: 5px;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		grid-gap: 30px;
+		.slide {
+			width: 90%;
+			height: 230px;
+			margin: 0 5%;
+			background-color: #fff;
+			position: relative;
+			.img {
+				height: 200px;
+				width: 100%;
+				background-size: cover;
+			}
+			.info {
+				height: 30px;
+				font-size: 12px;
+				padding: 0 5px;
+				text-transform: uppercase;
+				line-height: 20px;
+				color: #C0C0C0;
+				.one {
+					float: left;
+					cursor: pointer;
+				}
+				.two {
+					float: right;
+					cursor: pointer;
+				}
+			}
+			.text {
+				color: #fff;
+				text-align: center;
+				position: absolute;
+				width: 100%;
+				top: 45%;
+				left: 50%;
+				transform: translate(-50%, -45%);
+				z-index: 1;
+			}
+			.img-bcg {
+				width: 100%;
+				height: 100%;
+				background-color: #000;
+				opacity: 0.6;
+				top: 50%;
+			    left: 50%;
+			    transform: translate(0, -101.5%);
+			}
+		}
+	}
+}
+// Footer
+.footer {
+	background-color: #666666;
+	height: 100px;
+	text-align: center;
+	padding-top: 20px;
+	.links {
+		a{
+			text-decoration: none;
+			color: #fff;
+			font-size: 14px;
+			padding: 0 10px;
+		}
+	}
+	.copyright {
+		color: #5D8CAD;
+		padding-top: 20px;
+		font-size: 14px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+.nav {
+	height: 100px;
+	font-size: 20px;
+	border-bottom: 1px solid #bfbfbf;
+	a {
+		height: 50px;
+		margin: 25px 15px;
+		width: auto;
+		border-bottom: none;
+		p {
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+	}
+	a:hover {
+		background-color: #FAFAFA;
+	}
+	.left {
+		float: left;
+		padding-left: 50px;
+	}
+	.right {
+		float: right;
+		padding-right: 50px;
+		display: inline-flex;
+	}
+	.logo {
+		height: 100px;
+	}
+	.premium {
+		font-size: 18px;
+		color: #2885C5;
+		:hover {
+			background-color: #2885C5;
+			color: #fff;
+		}
+	}
+	.design {
+		background-color: #46B688;
+		color: #fff;
+		border: 2px solid #46B688;
+		:hover {
+			color: #46B688;
+			background-color: #fff;
+		}
+	}
+	.account {
+		background-color: #fff;
+		color: #4495CC;
+		border: 2px solid #4495CC;
+		:hover {
+			color: #fff;
+			background-color: #4495CC;
+		}
+	}
+	.show-menu {
+		display: none;
+	}
+}
+
+.main {
+	padding-top: 100px;
+	.menu {
+		float: left;
+		width: 30%;
+		ul {
+			li {
+				padding: 15px;
+				a {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	.slides {
+		float: right;
+		width: 70%;
+		padding-top: 15px;
+		.slide {
+			padding: 0;
+		}
+	}
+}
+//
+.footer {
+	padding-top: 30px;
+	.links {
+		a{
+			font-size: 18px;
+		}
+	}
+	.copyright {
+		padding-top: 20px;
+	}
+}
+}
