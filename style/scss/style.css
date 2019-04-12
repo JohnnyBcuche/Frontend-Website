@@ -60,7 +60,8 @@ body {
     padding-bottom: 40px;
     margin-bottom: -40px; }
     .main .menu ul {
-      list-style: none; }
+      list-style: none;
+      color: #B6B6B6; }
       .main .menu ul :hover {
         background-color: #F1F1F1;
         color: #2885C5; }
@@ -70,7 +71,7 @@ body {
         .main .menu ul li a {
           text-decoration: none;
           font-size: 14px;
-          color: #B6B6B6; }
+          color: inherit; }
   .main .slides {
     width: 100%;
     padding-bottom: 40px;

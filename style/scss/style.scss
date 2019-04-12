@@ -71,6 +71,7 @@ body {
 		margin-bottom: -40px;
 		ul {
 			list-style: none;
+			color: #B6B6B6;
 			:hover {
 				background-color: #F1F1F1;
 				color: #2885C5;
@@ -81,7 +82,7 @@ body {
 				a {
 					text-decoration: none;
 					font-size: 14px;
-					color: #B6B6B6;
+					color: inherit;
 				}
 			}
 		}
